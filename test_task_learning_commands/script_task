@@ -1,0 +1,25 @@
+# !/bin/bash
+echo "Let's Go"
+
+
+echo "We are here --> $(pwd)"
+mkdir script_folders
+ls --color
+echo "Folder is created so go on"
+cd script_folders
+echo "We are here --> $(pwd)"
+mkdir first second third
+echo "Should be 3 foledrs -- $(ls -m --color)"
+cd first
+touch readme.txt index.txt style.txt login.json data.json
+echo "We have already created files. So chek it: $(ls -m --color)"
+
+echo "The last we remove two files"
+mv readme.txt index.txt ../second
+echo "Should be 3 files in current folder 'first'"
+ls -m --color
+echo "Should be 2 files in current folder 'second'"
+
+ls -m --color ../second
+
+echo $(date)
